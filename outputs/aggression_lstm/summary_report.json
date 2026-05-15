@@ -1,0 +1,99 @@
+{
+  "input_csv": "data\\df_1s_processed.csv",
+  "rows": 6021,
+  "window_size": 10,
+  "step_size": 1,
+  "features": [
+    "Engine_RPM",
+    "Vehicle_Speed",
+    "Intake_MAP",
+    "MAF",
+    "Throttle_Pos",
+    "Accel_Pedal_D"
+  ],
+  "class_names": {
+    "0": "calm",
+    "1": "normal",
+    "2": "aggressive"
+  },
+  "n_windows": 6012,
+  "train_windows": 4809,
+  "test_windows": 1203,
+  "label_distribution": {
+    "0": 2007,
+    "1": 2007,
+    "2": 2007
+  },
+  "lstm": {
+    "classification_report": {
+      "calm": {
+        "precision": 0.9313593539703903,
+        "recall": 0.9664804469273743,
+        "f1-score": 0.9485949280328992,
+        "support": 716.0
+      },
+      "normal": {
+        "precision": 0.8464163822525598,
+        "recall": 0.8184818481848185,
+        "f1-score": 0.8322147651006712,
+        "support": 303.0
+      },
+      "aggressive": {
+        "precision": 0.9760479041916168,
+        "recall": 0.8858695652173914,
+        "f1-score": 0.9287749287749287,
+        "support": 184.0
+      },
+      "accuracy": 0.9168744804655029,
+      "macro avg": {
+        "precision": 0.9179412134715222,
+        "recall": 0.8902772867765281,
+        "f1-score": 0.9031948739694998,
+        "support": 1203.0
+      },
+      "weighted avg": {
+        "precision": 0.9167998966222631,
+        "recall": 0.9168744804655029,
+        "f1-score": 0.9162507308326235,
+        "support": 1203.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        692,
+        24,
+        0
+      ],
+      [
+        51,
+        248,
+        4
+      ],
+      [
+        0,
+        21,
+        163
+      ]
+    ]
+  },
+  "clustering": {
+    "adjusted_rand_score": 0.21384286845666858,
+    "crosstab": {
+      "0": {
+        "0": 1771,
+        "1": 799,
+        "2": 386
+      },
+      "1": {
+        "0": 181,
+        "1": 1034,
+        "2": 740
+      },
+      "2": {
+        "0": 53,
+        "1": 173,
+        "2": 875
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Generated outputs: only keep selected summary files.
+outputs/*
+!outputs/aggression_lstm/
+outputs/aggression_lstm/*
+!outputs/aggression_lstm/training_history.csv
+!outputs/aggression_lstm/summary_report.json
